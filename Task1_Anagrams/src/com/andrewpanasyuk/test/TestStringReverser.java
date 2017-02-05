@@ -20,6 +20,7 @@ public class TestStringReverser {
 		assertEquals("123456", stringReverser.reverse("123456"));
 		assertEquals("/*-+", stringReverser.reverse("/*-+"));
 		assertEquals("ÂÁÀâáà123CBAcba/*-+", stringReverser.reverse("abcABC123àáâÀÁÂ/*-+"));
+		assertEquals("abcABC123/*-+", stringReverser.reverse("CBAcba123/*-+"));
 		
 	}
 
