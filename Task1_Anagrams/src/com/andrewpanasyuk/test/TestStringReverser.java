@@ -7,7 +7,7 @@ import org.junit.Test;
 import com.andrewpanasyuk.anagrams.StringReverser;
 
 public class TestStringReverser {
-	final StringReverser stringReverser = new StringReverser();
+	private final StringReverser stringReverser = new StringReverser();
 	private String expected;
 	private String actual;
 
