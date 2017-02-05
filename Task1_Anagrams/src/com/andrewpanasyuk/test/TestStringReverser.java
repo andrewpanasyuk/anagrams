@@ -7,46 +7,64 @@ import org.junit.Test;
 import com.andrewpanasyuk.anagrams.StringReverser;
 
 public class TestStringReverser {
-	StringReverser stringReverser = new StringReverser();
+	final StringReverser stringReverser = new StringReverser();
+	private String expected;
+	private String actual;
 
 	@Test
 	public void testReverse1() {
-		assertEquals("dcba", stringReverser.reverse("abcd"));
+		expected = "dcba";
+		actual = stringReverser.reverse("abcd");
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testReverse2() {
-		assertEquals("dcba dcBa", stringReverser.reverse("abcd aBcd"));
+		expected = "dcba dcBa";
+		actual = stringReverser.reverse("abcd aBcd");
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testReverse3() {
-		assertEquals("dcb*a", stringReverser.reverse("abc*d"));
+		expected = "dcb*a";
+		actual = stringReverser.reverse("abc*d");
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testReverse4() {
-		assertEquals("dcb123*a,", stringReverser.reverse("abc123*d,"));
+		expected = "dcb123*a,";
+		actual = stringReverser.reverse("abc123*d,");
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testReverse5() {
-		assertEquals("d1cba", stringReverser.reverse("a1bcd"));
+		expected = "d1cba";
+		actual = stringReverser.reverse("a1bcd");
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testReverse6() {
-		assertEquals("123456", stringReverser.reverse("123456"));
+		expected = "123456";
+		actual = stringReverser.reverse("123456");
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testReverse7() {
-		assertEquals("/*-+", stringReverser.reverse("/*-+"));
+		expected = "/*-+";
+		actual = stringReverser.reverse("/*-+");
+		assertEquals(expected, actual);
 	}
 
 	@Test
 	public void testReverse8() {
-		assertEquals("abcABC123/*-+", stringReverser.reverse("CBAcba123/*-+"));
+		expected = "abcABC123/*-+";
+		actual = stringReverser.reverse("CBAcba123/*-+");
+		assertEquals(expected, actual);
 	}
 
 }
